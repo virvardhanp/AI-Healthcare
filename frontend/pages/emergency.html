@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Support - AI Healthcare</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="../index.html" class="brand">
+            <div class="brand-icon">🏥</div>
+            <h1>AI Healthcare</h1>
+        </a>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="healthcare.html">Healthcare Info</a>
+            <a href="ai-assistant.html">AI Assistant</a>
+            <a href="donors.html">Blood Donors</a>
+            <a href="emergency.html" class="active nav-emergency">🚑 Emergency</a>
+        </nav>
+    </header>
+
+    <main style="max-width: 800px; width: 100%; margin: 30px auto; padding: 0 20px;">
+
+        <div style="background: var(--emergency-bg); border: 1px solid var(--emergency-border); padding: 20px; border-radius: var(--radius-md); margin-bottom: 24px;">
+            <h2 style="color: var(--emergency); margin-bottom: 8px;">🚨 Immediate Emergency Numbers</h2>
+            <p style="font-size: 15px; color: #991b1b; margin-bottom: 12px;">
+                If you or someone near you has severe chest pain, breathing difficulties, stroke symptoms, or heavy bleeding, <strong>call emergency services right now</strong>:
+            </p>
+            <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <a href="tel:112" class="btn btn-danger" style="text-decoration: none;">📞 Dial 112 (National Helpline)</a>
+                <a href="tel:911" class="btn btn-danger" style="text-decoration: none;">📞 Dial 911 / 108 (Ambulance)</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 100%; margin-bottom: 24px;">
+            <h2>Submit Emergency Support Request</h2>
+            <p style="margin-bottom: 20px;">Fill out this rapid request form for prioritized medical or blood emergency coordination.</p>
+
+            <form id="emergencyForm">
+
+                <label for="requestType"><strong>Request Type:</strong></label>
+                <br><br>
+                <select id="requestType" required>
+                    <option value="">Select Request Type</option>
+                    <option value="Medical Emergency">Medical Emergency</option>
+                    <option value="Ambulance Support">Ambulance Support</option>
+                    <option value="Blood Emergency">Blood Emergency</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <br><br>
+
+                <label for="location"><strong>Location (City / Area):</strong></label>
+                <br><br>
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Enter city, district or hospital location"
+                    required
+                >
+
+                <br><br>
+
+                <label for="description"><strong>Description of Emergency:</strong></label>
+                <br><br>
+                <textarea
+                    id="description"
+                    rows="5"
+                    placeholder="Describe patient condition, urgent symptoms, or required assistance..."
+                    required
+                ></textarea>
+
+                <br><br>
+
+                <button type="submit" class="btn-danger" style="width: 100%; padding: 14px;">
+                    🚨 Submit Priority Request
+                </button>
+
+            </form>
+
+            <p id="emergencyMessage" style="margin-top: 16px; font-weight: 600;"></p>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 AI Healthcare System • Rapid Emergency Response Service</p>
+    </footer>
+
+    <script src="../js/emergency.js"></script>
+
+</body>
+
+</html>

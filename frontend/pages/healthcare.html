@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Healthcare Information - AI Healthcare</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <a href="../index.html" class="brand">
+
+            <div class="brand-icon">
+                🏥
+            </div>
+
+            <div class="brand-text">
+                <h1>AI Healthcare</h1>
+                <span>Smart Healthcare Companion</span>
+            </div>
+
+        </a>
+
+
+        <nav>
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="healthcare.html" class="active">
+                Healthcare Info
+            </a>
+
+            <a href="ai-assistant.html">
+                AI Assistant
+            </a>
+
+            <a href="donors.html">
+                Blood Donors
+            </a>
+
+            <a href="emergency.html" class="nav-emergency">
+                🚑 Emergency
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="healthcare-page">
+
+
+        <!-- =========================
+             HERO SECTION
+        ========================== -->
+
+        <section class="health-hero">
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+                    🩺 HEALTHCARE INFORMATION
+                </div>
+
+                <h2>
+                    Your Health,
+                    <span>Our Information</span>
+                </h2>
+
+                <p>
+                    Explore general healthcare information,
+                    common health conditions, wellness tips,
+                    nutrition, sleep and first-aid guidance.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#health-search" class="primary-btn">
+                        🔍 Search Health
+                    </a>
+
+                    <a href="#health-topics" class="secondary-btn">
+                        📚 Explore Topics
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+                <div class="medical-circle">
+                    <div class="medical-cross">
+                        +
+                    </div>
+                </div>
+
+                <div class="floating-icon icon-one">
+                    ❤️
+                </div>
+
+                <div class="floating-icon icon-two">
+                    🩺
+                </div>
+
+                <div class="floating-icon icon-three">
+                    💊
+                </div>
+
+                <div class="floating-icon icon-four">
+                    🧬
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             HEALTH STATISTICS
+        ========================== -->
+
+        <section class="health-stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🩺
+                </div>
+
+                <div>
+                    <strong>8+</strong>
+                    <span>Health Topics</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🔍
+                </div>
+
+                <div>
+                    <strong>24/7</strong>
+                    <span>Information Access</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📚
+                </div>
+
+                <div>
+                    <strong>General</strong>
+                    <span>Health Information</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🚑
+                </div>
+
+                <div>
+                    <strong>Emergency</strong>
+                    <span>Support Available</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             HEALTH SEARCH
+        ========================== -->
+
+        <section
+            class="health-search-section"
+            id="health-search"
+        >
+
+            <div class="section-heading">
+
+                <div class="section-icon">
+                    🔎
+                </div>
+
+                <div>
+
+                    <span class="section-label">
+                        HEALTH SEARCH
+                    </span>
+
+                    <h2>
+                        Search Healthcare Information
+                    </h2>
+
+                    <p>
+                        Search for a healthcare topic and
+                        get useful information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH BOX -->
+
+            <div class="health-search-box">
+
+                <input
+                    type="text"
+                    id="healthSearch"
+                    placeholder="Search for Fever, Cold, Headache..."
+                    autocomplete="off"
+                >
+
+                <button
+                    type="button"
+                    onclick="searchHealth()"
+                >
+                    🔍 Search
+                </button>
+
+            </div>
+
+
+            <!-- POPULAR SEARCHES -->
+
+            <div class="quick-topics">
+
+                <span>
+                    Popular:
+                </span>
+
+
+                <button
+                    type="button"
+                    onclick="quickSearch('Fever')"
+                >
+                    🌡️ Fever
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="quickSearch('Cold')"
+                >
+                    🤧 Cold
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="quickSearch('Headache')"
+                >
+                    🤕 Headache
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="quickSearch('Hydration')"
+                >
+                    💧 Hydration
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="quickSearch('Stress')"
+                >
+                    🧠 Stress
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="quickSearch('First Aid')"
+                >
+                    🩹 First Aid
+                </button>
+
+            </div>
+
+
+            <!--
+                HEALTHCARE API RESULT
+
+                Results from:
+                http://localhost:5000/api/health
+
+                will appear here.
+            -->
+
+            <div id="healthResult"></div>
+
+        </section>
+
+
+        <!-- =========================
+             HEALTHCARE TOPICS
+        ========================== -->
+
+        <section
+            class="health-topics"
+            id="health-topics"
+        >
+
+            <div class="section-heading centered">
+
+                <span class="section-label">
+                    EXPLORE
+                </span>
+
+                <h2>
+                    Healthcare Topics
+                </h2>
+
+                <p>
+                    Explore different areas of health
+                    and general wellness.
+                </p>
+
+            </div>
+
+
+            <div class="health-grid">
+
+
+                <!-- FEVER -->
+
+                <div
+                    class="health-topic-card"
+                    onclick="quickSearch('Fever')"
+                >
+
+                    <div class="topic-top">
+
+                        <div class="topic-icon fever">
+                            🌡️
+                        </div>
+
+                        <span class="topic-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Fever
+                    </h3>
+
+                    <p>
+                        Learn about fever, common symptoms
+                        and general healthcare information.
+                    </p>
+
+                    <span class="topic-link">
+                        Explore topic →
+                    </span>
+
+                </div>
+
+
+                <!-- COMMON COLD -->
+
+                <div
+                    class="health-topic-card"
+                    onclick="quickSearch('Cold')"
+                >
+
+                    <div class="topic-top">
+
+                        <div class="topic-icon cold">
+                            🤧
+                        </div>
+
+                        <span class="topic-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Common Cold
+                    </h3>
+
+                    <p>
+                        Understand common cold symptoms
+                        and general care information.
+                    </p>
+
+                    <span class="topic-link">
+                        Explore topic →
+                    </span>
+
+                </div>
+
+
+                <!-- HEADACHE -->
+
+                <div
+                    class="health-topic-card"
+                    onclick="quickSearch('Headache')"
+                >
+
+                    <div class="topic-top">
+
+                        <div class="topic-icon headache">
+                            🤕
+                        </div>
+
+                        <span class="topic-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Headache
+                    </h3>
+
+                    <p>
+                        Learn about common headache symptoms
+                        and general self-care information.
+                    </p>
+
+                    <span class="topic-link">
+                        Explore topic →
+                    </span>
+
+                </div>
+
+
+                <!-- HYDRATION -->
+
+                <div
+                    class="health-topic-card"
+                    onclick="quickSearch('Hydration')"
+                >
+
+                    <div class="topic-top">
+
+                        <div class="topic-icon hydration">
+                            💧
+                        </div>
+
+                        <span class="topic-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Hydration
+                    </h3>
+
+                    <p>
+                        Learn why hydration is important
+                        and understand signs of dehydration.
+                    </p>
+
+                    <span class="topic-link">
+                        Explore topic →
+                    </span>
+
+                </div>
+
+
+                <!-- STRESS -->
+
+                <div
+                    class="health-topic-card"
+                    onclick="quickSearch('Stress')"
+                >
+
+                    <div class="topic-top">
+
+                        <div class="topic-icon stress">
+                            🧠
+                        </div>
+
+                        <span class="topic-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Stress Management
+                    </h3>
+
+                    <p>
+                        Explore healthy habits that support
+                        everyday mental well-being.
+                    </p>
+
+                    <span class="topic-link">
+                        Explore topic →
+                    </span>
+
+                </div>
+
+
+                <!-- FIRST AID -->
+
+                <div
+                    class="health-topic-card"
+                    onclick="quickSearch('First Aid')"
+                >
+
+                    <div class="topic-top">
+
+                        <div class="topic-icon first-aid">
+                            🩹
+                        </div>
+
+                        <span class="topic-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        First Aid
+                    </h3>
+
+                    <p>
+                        Learn basic first-aid information
+                        and when professional help may be needed.
+                    </p>
+
+                    <span class="topic-link">
+                        Explore topic →
+                    </span>
+
+                </div>
+
+
+                <!-- NUTRITION -->
+
+                <div class="health-topic-card">
+
+                    <div class="topic-top">
+
+                        <div class="topic-icon nutrition">
+                            🥗
+                        </div>
+
+                        <span class="topic-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Nutrition
+                    </h3>
+
+                    <p>
+                        Learn about balanced nutrition
+                        and healthy eating habits.
+                    </p>
+
+                    <span class="topic-link">
+                        General information
+                    </span>
+
+                </div>
+
+
+                <!-- SLEEP -->
+
+                <div class="health-topic-card">
+
+                    <div class="topic-top">
+
+                        <div class="topic-icon sleep">
+                            😴
+                        </div>
+
+                        <span class="topic-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Sleep & Rest
+                    </h3>
+
+                    <p>
+                        Understand the importance of
+                        healthy sleep and adequate rest.
+                    </p>
+
+                    <span class="topic-link">
+                        General information
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EVERYDAY HEALTH HABITS
+        ========================== -->
+
+        <section class="health-tips">
+
+            <div class="section-heading centered">
+
+                <span class="section-label">
+                    WELLNESS
+                </span>
+
+                <h2>
+                    Everyday Health Habits
+                </h2>
+
+                <p>
+                    Simple habits that can support
+                    your overall well-being.
+                </p>
+
+            </div>
+
+
+            <div class="tips-grid">
+
+
+                <!-- HYDRATION -->
+
+                <div class="tip-card">
+
+                    <div class="tip-icon">
+                        💧
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Stay Hydrated
+                        </h3>
+
+                        <p>
+                            Drink fluids regularly according
+                            to your individual needs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- NUTRITION -->
+
+                <div class="tip-card">
+
+                    <div class="tip-icon">
+                        🥗
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Balanced Nutrition
+                        </h3>
+
+                        <p>
+                            Include a variety of nutritious
+                            foods in everyday meals.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SLEEP -->
+
+                <div class="tip-card">
+
+                    <div class="tip-icon">
+                        😴
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Healthy Sleep
+                        </h3>
+
+                        <p>
+                            Maintain a consistent sleep
+                            routine and get adequate rest.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHYSICAL ACTIVITY -->
+
+                <div class="tip-card">
+
+                    <div class="tip-icon">
+                        🏃
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Stay Active
+                        </h3>
+
+                        <p>
+                            Choose safe and age-appropriate
+                            physical activities.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MEDICAL NOTICE
+        ========================== -->
+
+        <section class="health-notice">
+
+            <div class="notice-icon">
+                ⚠️
+            </div>
+
+            <div>
+
+                <h3>
+                    Important Medical Notice
+                </h3>
+
+                <p>
+                    The information provided on AI Healthcare
+                    is intended for general educational purposes
+                    only. It should not be considered a diagnosis
+                    or a replacement for professional medical advice.
+                </p>
+
+                <p>
+                    If you have a serious or urgent health concern,
+                    contact a qualified healthcare professional
+                    or your local emergency service.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-content">
+
+
+            <!-- FOOTER BRAND -->
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    🏥
+                </div>
+
+                <div>
+
+                    <h3>
+                        AI Healthcare
+                    </h3>
+
+                    <p>
+                        Smart technology for accessible
+                        healthcare information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOTER LINKS -->
+
+            <div class="footer-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="healthcare.html">
+                    Healthcare
+                </a>
+
+                <a href="ai-assistant.html">
+                    AI Assistant
+                </a>
+
+                <a href="donors.html">
+                    Blood Donors
+                </a>
+
+                <a href="emergency.html">
+                    Emergency
+                </a>
+
+            </div>
+
+
+            <!-- COPYRIGHT -->
+
+            <div class="footer-copy">
+
+                <p>
+                    © 2026 AI Healthcare
+                </p>
+
+                <span>
+                    Built for better healthcare access.
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         HEALTHCARE JAVASCRIPT ONLY
+    ========================== -->
+
+    <script src="../js/healthcare.js"></script>
+
+</body>
+
+</html>

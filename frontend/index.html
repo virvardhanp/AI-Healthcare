@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Healthcare System - Smart Medical Assistant & Resources</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="brand">
+            <div class="brand-icon">🏥</div>
+            <h1>AI Healthcare</h1>
+        </a>
+
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="pages/dashboard.html">Dashboard</a>
+            <a href="pages/healthcare.html">Healthcare Info</a>
+            <a href="pages/ai-assistant.html">AI Assistant</a>
+            <a href="pages/donors.html">Blood Donors</a>
+            <a href="pages/emergency.html" class="nav-emergency">🚑 Emergency</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h2>Your Smart AI Healthcare Assistant</h2>
+            <p>
+                Instant medical guidance, symptom analysis, blood donor matching, and immediate emergency triage support at your fingertips.
+            </p>
+            <button id="startButton">
+                💬 Start AI Health Assistant
+            </button>
+        </section>
+
+        <section class="features">
+
+            <div class="card" style="cursor: pointer;" onclick="window.location.href='pages/ai-assistant.html'">
+                <h3>🤖 Dr. Nova AI Assistant</h3>
+                <p>Chat with our intelligent clinical assistant for symptom guidance, triage, and wellness advice.</p>
+                <br>
+                <a href="pages/ai-assistant.html" style="color: var(--primary); font-weight: 600; text-decoration: none;">Launch Chat &rarr;</a>
+            </div>
+
+            <div class="card" style="cursor: pointer;" onclick="window.location.href='pages/donors.html'">
+                <h3>🩸 Blood Donors</h3>
+                <p>Find registered blood donors nearby by blood group or sign up as a voluntary blood donor.</p>
+                <br>
+                <a href="pages/donors.html" style="color: var(--primary); font-weight: 600; text-decoration: none;">Find Donors &rarr;</a>
+            </div>
+
+            <div class="card" style="cursor: pointer;" onclick="window.location.href='pages/emergency.html'">
+                <h3>🚑 Emergency Support</h3>
+                <p>Quickly access emergency helpline numbers or submit urgent medical assistance requests.</p>
+                <br>
+                <a href="pages/emergency.html" style="color: var(--emergency); font-weight: 600; text-decoration: none;">Get Urgent Help &rarr;</a>
+            </div>
+
+            <div class="card" style="cursor: pointer;" onclick="window.location.href='pages/healthcare.html'">
+                <h3>🏥 Health Knowledge</h3>
+                <p>Explore medically verified educational guides on nutrition, hydration, sleep, and common ailments.</p>
+                <br>
+                <a href="pages/healthcare.html" style="color: var(--primary); font-weight: 600; text-decoration: none;">Explore Info &rarr;</a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 AI Healthcare System • Designed for Reliable, Accessible Care</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

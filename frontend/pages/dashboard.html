@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - AI Healthcare</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="../index.html" class="brand">
+            <div class="brand-icon">🏥</div>
+            <h1>AI Healthcare</h1>
+        </a>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="healthcare.html">Healthcare Info</a>
+            <a href="ai-assistant.html">AI Assistant</a>
+            <a href="donors.html">Blood Donors</a>
+            <a href="emergency.html" class="nav-emergency">🚑 Emergency</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" style="padding: 40px 20px 20px;">
+            <h2>Healthcare Control Dashboard</h2>
+            <p>Access all clinical and emergency resources from a centralized hub.</p>
+        </section>
+
+        <div class="features">
+
+            <div class="card">
+                <h2>🤖 AI Assistant</h2>
+                <p>Chat with Dr. Nova for instant symptom triage, home care advice, and medical inquiries.</p>
+                <br>
+                <button onclick="openAI()" style="width: 100%;">
+                    Open AI Assistant
+                </button>
+            </div>
+
+            <div class="card">
+                <h2>🩸 Blood Donors</h2>
+                <p>Search for blood donors categorized by blood group or register as a donor.</p>
+                <br>
+                <button onclick="openDonors()" style="width: 100%;">
+                    Find Donors
+                </button>
+            </div>
+
+            <div class="card">
+                <h2>🚑 Emergency</h2>
+                <p>Immediate access to emergency numbers and priority hospital support.</p>
+                <br>
+                <button onclick="openEmergency()" class="btn-danger" style="width: 100%;">
+                    Emergency Support
+                </button>
+            </div>
+
+            <div class="card">
+                <h2>🏥 Healthcare Info</h2>
+                <p>Browse educational topics including nutrition, hydration, sleep, and first aid.</p>
+                <br>
+                <button onclick="openHealthcare()" class="btn-outline" style="width: 100%;">
+                    View Information
+                </button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 AI Healthcare System • Centralized Patient & Resource Dashboard</p>
+    </footer>
+
+    <script>
+        function openAI() {
+            window.location.href = "ai-assistant.html";
+        }
+
+        function openDonors() {
+            window.location.href = "donors.html";
+        }
+
+        function openEmergency() {
+            window.location.href = "emergency.html";
+        }
+
+        function openHealthcare() {
+            window.location.href = "healthcare.html";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Healthcare Assistant - Dr. Nova</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- ==================== MAIN HEADER & NAVIGATION ==================== -->
+    <header>
+        <a href="../index.html" class="brand">
+            <div class="brand-icon">🏥</div>
+            <h1>AI Healthcare</h1>
+        </a>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="healthcare.html">Healthcare Info</a>
+            <a href="ai-assistant.html" class="active">AI Assistant</a>
+            <a href="donors.html">Blood Donors</a>
+            <a href="emergency.html" class="nav-emergency">🚑 Emergency</a>
+        </nav>
+    </header>
+
+    <!-- ==================== MAIN CHATBOT LAYOUT ==================== -->
+    <main class="chat-page-container">
+
+        <div class="chat-card">
+
+            <!-- Chat Card Top Header -->
+            <div class="chat-card-header">
+                <div class="chat-bot-profile">
+                    <div class="bot-avatar-container">
+                        🩺
+                        <span class="online-status-dot" title="Assistant is online and active"></span>
+                    </div>
+                    <div class="chat-bot-info">
+                        <h2>
+                            Dr. Nova
+                            <span class="badge-verified">AI Medical Guide</span>
+                        </h2>
+                        <p>24/7 Smart Health Guidance & Symptom Support</p>
+                    </div>
+                </div>
+
+                <div class="chat-header-actions">
+                    <a href="emergency.html" class="btn btn-sm btn-danger" title="Access emergency support">
+                        🚨 Emergency
+                    </a>
+                    <button id="clearChatBtn" class="btn btn-sm btn-outline" title="Clear conversation history">
+                        🔄 Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Emergency Safety Banner -->
+            <div class="chat-emergency-bar">
+                <span>⚠️ <strong>Medical Emergency?</strong> Call <strong>112</strong> / <strong>911</strong> immediately.</span>
+                <a href="emergency.html">Submit Urgent Request &rarr;</a>
+            </div>
+
+            <!-- Chat Message Thread Box -->
+            <div id="chatBox" class="chat-messages-container" aria-live="polite">
+                <!-- Messages will be populated dynamically by ai.js -->
+            </div>
+
+            <!-- Typing Indicator -->
+            <div id="typingIndicator" class="message-row assistant typing-indicator-row">
+                <div class="message-avatar">🩺</div>
+                <div class="typing-bubble">
+                    <div class="typing-dots">
+                        <span class="typing-dot"></span>
+                        <span class="typing-dot"></span>
+                        <span class="typing-dot"></span>
+                    </div>
+                    <span class="typing-text">Dr. Nova is analyzing...</span>
+                </div>
+            </div>
+
+            <!-- Quick Suggestion Chips -->
+            <div class="quick-suggestions">
+                <span class="suggestions-title">💡 Suggested Questions</span>
+                <div class="chips-slider">
+                    <button type="button" class="chip-btn" data-query="What should I do for a mild fever and body ache?">
+                        🌡️ Mild Fever Care
+                    </button>
+                    <button type="button" class="chip-btn" data-query="How to relieve a tension headache quickly?">
+                        🤕 Tension Headache
+                    </button>
+                    <button type="button" class="chip-btn" data-query="Who is eligible to donate blood and what are requirements?">
+                        🩸 Blood Donor Eligibility
+                    </button>
+                    <button type="button" class="chip-btn" data-query="What are the warning signs of a heart attack or stroke?">
+                        🚨 Emergency Signs (FAST)
+                    </button>
+                    <button type="button" class="chip-btn" data-query="Tips for a balanced daily diet and optimal hydration">
+                        🥗 Diet & Hydration
+                    </button>
+                    <button type="button" class="chip-btn" data-query="First aid steps for minor burns and cuts">
+                        🩹 First Aid Basics
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Input Area -->
+            <div class="chat-input-bar">
+                <form id="chatForm" class="chat-input-form" onsubmit="return false;">
+                    <input
+                        type="text"
+                        id="message"
+                        class="chat-input-field"
+                        placeholder="Ask a health question or describe symptoms... (Press Enter)"
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit" id="sendButton" class="chat-send-btn" title="Send message">
+                        ➤
+                    </button>
+                </form>
+                <div class="chat-disclaimer">
+                    ℹ️ Dr. Nova is an AI assistant for educational support. Always consult a physician for official medical diagnosis.
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 AI Healthcare System • Empowering Smart & Accessible Health Guidance</p>
+    </footer>
+
+    <!-- Chatbot Script -->
+    <script src="../js/ai.js"></script>
+
+</body>
+
+</html>
