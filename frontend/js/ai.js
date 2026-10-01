@@ -17,9 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let conversationHistory = [];
 
     // Detect API base URL
-    const API_URL = (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") && window.location.port !== "5000"
-        ? "http://localhost:5000/api/ai/chat"
-        : (window.location.protocol === "file:" ? "http://localhost:5000/api/ai/chat" : "/api/ai/chat");
+    const API_URL = "https://ai-healthcare-lz4u.onrender.com/api/ai/chat";
 
     /**
      * Converts markdown syntax (bold, headings, bullet lists, links) into clean HTML
