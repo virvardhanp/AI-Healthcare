@@ -22,7 +22,7 @@ donorForm.addEventListener("submit", async function (event) {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/donors",
+            "https://ai-healthcare-lz4u.onrender.com/api/donors",
             {
                 method: "POST",
 
@@ -101,7 +101,7 @@ searchButton.addEventListener("click", async function () {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/donors"
+            "https://ai-healthcare-lz4u.onrender.com/api/donors"
         );
 
 
